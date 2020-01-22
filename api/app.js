@@ -18,8 +18,8 @@ app.use(cors());
 app.use(morgan());
 
 // Routes
-app.get('/', (req, res) => {
-    res.send('Hello World ^_^');
-});
+const tasks = require('../api/routes/task');
+
+app.use('/tasks', tasks);
 
 module.exports = app;
