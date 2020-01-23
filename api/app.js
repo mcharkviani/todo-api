@@ -19,9 +19,11 @@ app.use(morgan());
 
 // Routes
 const tasks = require('../api/routes/task');
+const auth = require('../api/routes/auth');
 const users = require('../api/routes/user');
 
 app.use('/tasks', tasks);
+app.use('/auth', auth);
 app.use('/users', users);
 
 module.exports = app;
