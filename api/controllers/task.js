@@ -33,7 +33,7 @@ exports.updateTask = async (req, res, next) => {
     else {
         await Task.findByIdAndUpdate(id, req.body, {new: true})
         .then((result) => {
-            res.status(200).json({message: 'Task updated successfully', data: result});
+            res.status(200).send({message: 'Task updated successfully', data: result});
         })
         .catch((err) => {
             res.json({success: false, error: err.message})

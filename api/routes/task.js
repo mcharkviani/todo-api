@@ -12,6 +12,6 @@ router.route('/:id')
     .patch(protect, updateTask)
     .delete(protect, deleteTask)
 
-router.get('/completed', getTasks)
+router.get('/completed', protect, getTasks)
 
 module.exports = router;
