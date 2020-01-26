@@ -9,6 +9,11 @@ const TaskSchema = mongoose.Schema({
         type: Boolean,
         require: true,
         default: false
+    },
+    user: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'Users',
+        require: false
     }
 });
 
